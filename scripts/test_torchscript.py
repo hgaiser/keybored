@@ -48,15 +48,12 @@ def main() -> None:
 			x = rect[0] + rect[2] // 2
 			y = rect[1] + rect[3] // 2
 
-			# cv2.circle(image, (x, y), size, (200, 180, 0), 2, cv2.LINE_AA)
-			cv2.line(image, (x - size, y - size), (x + size, y + size), (20, 20, 20), 2, cv2.LINE_AA)
-			cv2.line(image, (x + size, y - size), (x - size, y + size), (20, 20, 20), 2, cv2.LINE_AA)
-			cv2.line(image, (x - size, y - size), (x + size, y + size), (240, 24, 0), 1, cv2.LINE_AA)
-			cv2.line(image, (x + size, y - size), (x - size, y + size), (240, 24, 0), 1, cv2.LINE_AA)
+			cv2.circle(image, (x, y), size, (252, 15, 192), -1, cv2.LINE_AA)
+			cv2.circle(image, (x, y), size // 2, (55, 247, 19), -1, cv2.LINE_AA)
 
-		indices = np.where(mask != 0)
-		image = np.array(image)
-		image[indices[0], indices[1], :] = 0
+		# indices = np.where(mask != 0)
+		# image = np.array(image)
+		# image[indices[0], indices[1], :] = 0
 
 		import matplotlib.pyplot as plt
 		plt.imshow(image)
