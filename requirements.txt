@@ -1,0 +1,7 @@
+albumentations
+gradio
+numpy
+pillow
+pytorch_lightning
+segmentation_models_pytorch
+torchvision
